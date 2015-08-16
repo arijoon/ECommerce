@@ -8,6 +8,9 @@
   <dd><%= @product.name %></dd>
   <dt><strong>Seller:</strong></dt>
   <dd><%= @product.user.name %></dd>
+  <dt><strong>Category:</strong></dt>
+  <dd><%= @product.category.nil? ? "Uncategorised" : @product.category.name %></dd>
+</dl>
 </dl>
 
 <div class="form-actions">

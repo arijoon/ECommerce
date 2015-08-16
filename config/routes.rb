@@ -1,4 +1,6 @@
 ColsBets::Application.routes.draw do
+  resources :categories
+
   resources :users
   resources :products
   resources :sessions, only: [:new, :create, :destroy]
