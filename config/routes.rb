@@ -1,4 +1,6 @@
 ColsBets::Application.routes.draw do
+  resources :baskets
+
   resources :categories
 
   resources :users

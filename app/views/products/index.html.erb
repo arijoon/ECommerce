@@ -33,6 +33,10 @@
                         :method => :delete,
                         :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                         :class => 'btn btn-mini btn-danger' %>
+          <% elsif signed_in?  %>
+            <%= link_to t('.create', default: "Add to Basket"), baskets_path(product_id: product.id),
+                          :method => :post,
+                          :class => 'btn btn-mini btn-primary' %>
           <% end %>
         </td>
       </tr>

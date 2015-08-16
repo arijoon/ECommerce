@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :signed_in_user, only: [:new, :edit, :update,:destroy]
-  before_action :correct_user, only: [:destroy, :update]
+  before_action :correct_user, only: [:edit,:destroy, :update]
 
 
   # GET /products

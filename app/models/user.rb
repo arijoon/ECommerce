@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   before_create :create_remember_token
   has_many :products
+  has_many :baskets
   validates :name, presence: true, allow_blank: false
 
   def User.new_remember_token
