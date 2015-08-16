@@ -1,11 +1,9 @@
 ColsBets::Application.routes.draw do
-  resources :baskets
-
-  resources :categories
-
   resources :users
   resources :products
   resources :sessions, only: [:new, :create, :destroy]
+  resources :baskets, only: [:index,:create,:destroy]
+  resources :categories
   root 'products#index'
 
   match '/signin', to: 'sessions#new', via: 'get'

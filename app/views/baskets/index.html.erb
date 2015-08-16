@@ -6,7 +6,6 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:product_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th>Stock</th>
@@ -19,7 +18,6 @@
     <% else %> 
       <% @baskets.each do |basket| %>
         <tr>
-          <td><%= link_to basket.id, basket_path(basket) %></td>
           <td><%= basket.product.name %></td>
           <td><%=l basket.created_at %></td>
           <td><%= basket.product.stock.nil? ? "0" : basket.product.stock %></td>
