@@ -9,6 +9,7 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:user_id) %></th>
+      <th><%= model_class.human_attribute_name(:stock) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%= model_class.human_attribute_name(:category_id) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -20,6 +21,7 @@
         <td><%= link_to product.id, product_path(product) %></td>
         <td><%= product.name %></td>
         <td><%= product.user.name %></td>
+        <td><%= product.stock %></td>
         <td><%=l product.created_at %></td>
         <td>
           <%= product.category.nil? ? "Uncategorised" : product.category.name %>
